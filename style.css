@@ -1,0 +1,225 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+:root{
+    --grey-color: rgb(200, 200, 200);
+    --clau-color: #f2f1eb;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.main-wrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+#header{
+    height: clamp(50px, 5vh, 200px);
+    justify-content: center;
+    align-content: center;
+    font-size: 2.6em;
+    font-weight: 600;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    display: flex;
+    position: relative;
+}
+#pfp{
+    width: clamp(20px,4vw,50px);
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.5em;
+    z-index: 11;
+}
+#name{
+    width: clamp(20vw,300px,40vw);
+    text-align: center;
+    z-index: 11;
+    font-size: clamp(1vw, 2.6rem, 10vw);
+    white-space: nowrap;
+}
+
+.icons{
+    position: absolute;
+    
+    right: 0.5em;
+    gap: 0.3em;
+    width: auto;
+   display: flex;
+   font-size: clamp(1rem, 5vw, 2.5rem)
+}
+.fa-linkedin{
+    transition: 0.2s;
+}
+.fa-linkedin:hover{
+    color: rgb(0, 0, 123);  
+}
+.fa-github{
+   transition: 0.2s;
+}
+.fa-github:hover{
+    color: rgb(201, 131, 0);
+}
+.fa-spotify{
+    transition: 0.2s;
+}
+.fa-spotify:hover{
+    color: rgb(0, 94, 0);
+}
+
+
+nav{
+    text-align: center;
+    width: 100vw;
+    border-top: 1px solid var(--grey-color);
+    border-bottom: 1px solid var(--grey-color);
+    align-self: center;
+    background-color: var(--clau-color);
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+
+.navcontainer {
+    width: 65vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.navcontainer p{
+    width: calc(65vw / 6);
+    padding-top: .6em;
+    padding-bottom: .6em;  
+    transition: ease-in-out 0.2s;
+    
+}
+.navcontainer p:hover{
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
+
+p{
+    margin: 0;
+}
+
+#content{
+    width:clamp(55vw, 1000px, 90vw);
+    height: calc(100vh - 10em);
+    margin-top: 10px;
+    align-self:center;
+    text-align: left;
+    flex: 1;
+}
+
+.contentbox{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#contentbox img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+.textcontent {
+    flex: 1;
+    padding-left: 2em;
+}
+
+.title{
+    font-weight: 500;
+}
+.main{
+    line-height: 1.7em;
+    font-size: 1.1em;
+}
+#footer {
+    align-self: center;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 100vw;
+    z-index: 10;
+    background-color: var(--clau-color);
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-top: 1px solid var(--grey-color);
+}
+@media (max-width: 768px) {
+    #header {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 0.5em 0.5em;
+        align-items: center;
+    }
+    
+    #pfp {
+        display: none;
+
+    }
+    
+    #name {
+        margin: 0;
+        font-size: clamp(2rem, 7vw, 2.8rem);
+        width: 100vw;
+    }
+
+    .navcontainer{
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 40px 40px;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+       
+
+    }
+
+    .navcontainer > * {
+        background-color: var(--clau-color);
+        width: 100%;
+        height: 100%;
+    }
+
+    .navcontainer p{
+        width: 100%;
+        font-size: 1em;
+        
+    }
+    
+    .icons {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        display: none;
+        gap: 10px;
+        flex-direction: row;
+        align-items: center;
+    }
+}
