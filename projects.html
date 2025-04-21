@@ -18,12 +18,35 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <title>My Website</title>
+    <style>
+      
+      .mainhead{
+        font-size: 1.1em;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        background-color: white;
+        padding:0.3em;
+        
+      }
+      .mainhead::after{
+        content: '';
+        position: absolute;
+        height: 120%;
+        width: 105%;
+        background: linear-gradient(90deg,black, #919085,black);
+        z-index: -1;
+      }
+      
+    </style>
   </head>
   <body>
     <div class="main-wrapper">
       <div id="header">
         <a href="#"
-          ><img id="pfp" src="Profile.jpg" alt="Profile Picture"
+          ><img id="pfp" src="images/Profile.jpg" alt="Profile Picture"
         /></a>
         <a href="#"><p id="name">Chaemin Lee</p></a>
         <div class="icons">
@@ -57,12 +80,13 @@
         </div>
       </nav>
       <div id="content">
-        <h1 class="title">Welcome to My Page</h1>
+        <h1 class="title">Ongoing Projects</h1>
+        <p class="main">Currently, I am working on a VST.</p>
+        <h1 class="title">Past Projects</h1>
         <p class="main">
-          Soon, I will be adding more content in, such as my published articles,
-          projects, maybe even some anecdotes relating to my music career. I
-          also want to add sidebars on both sides that scroll constantly to the
-          vertical direction and display pictures of my projects.
+          <span class="mainhead">Project Hokulani</span><br>
+          Project Hokulani was a collaborative effort from many STEM-interested individuals in Hawaii to make STEM education more enjoyable and accessible.
+        </p>
         </p>
       </div>
       <div id="footer">© 2025 Chaemin Lee; My personal project.</div>
