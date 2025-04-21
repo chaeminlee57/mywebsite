@@ -18,12 +18,26 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <title>My Website</title>
+    <style>
+      @media (max-width: 768px) {
+        .textcontent {
+          padding: 0;
+        }
+        .title {
+          font-size: 1.7em;
+        }
+        .main {
+          font-size: 0.8em;
+          line-height: 1.3em;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="main-wrapper">
       <div id="header">
         <a href="#"
-          ><img id="pfp" src="Profile.jpg" alt="Profile Picture"
+          ><img id="pfp" src="images/Profile.jpg" alt="Profile Picture"
         /></a>
         <a href="#"><p id="name">Chaemin Lee</p></a>
         <div class="icons">
@@ -59,9 +73,9 @@
       <div id="content">
         <div class="contentbox">
           <img
-            src="ecogovlab.png"
+            src="images/ecogovlab.png"
             alt="EcoGovLab"
-            style="float: right"
+            style="width: clamp(10vw, 300px, 40vw)"
           />
           <div class="textcontent">
             <h1 class="title">EcoGovLab</h1>
