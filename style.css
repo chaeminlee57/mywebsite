@@ -36,6 +36,11 @@ body{
     white-space: nowrap;
     text-align: right; 
     width: auto; 
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.university.fadeIn{
+    opacity: 1;
 }
 .content {
     width: 80vw;
@@ -46,7 +51,7 @@ body{
     margin: 0;
     padding: 1em 1.5em;
     font-size: 1.5em;
-    color: coral;
+    color: rgb(197, 197, 197);
 }
 .description {
     font-weight: 400;
